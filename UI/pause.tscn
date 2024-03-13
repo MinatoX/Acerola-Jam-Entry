@@ -1,0 +1,104 @@
+[gd_scene load_steps=3 format=3 uid="uid://crnnyutwl33cn"]
+
+[ext_resource type="Script" path="res://Acerola-Jam-Entry/UI/pause.gd" id="1_xbmyt"]
+[ext_resource type="PackedScene" uid="uid://c487fmp4qwi1o" path="res://Acerola-Jam-Entry/UI/audio_config.tscn" id="2_uacx2"]
+
+[node name="Pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xbmyt")
+
+[node name="AudioConfig" parent="." instance=ExtResource("2_uacx2")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -285.0
+offset_top = -113.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="VideoConfig" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -285.0
+offset_top = -228.0
+offset_bottom = -115.0
+
+[node name="FullscreenLbl" type="Label" parent="VideoConfig"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_right = 0.3
+anchor_bottom = 0.398
+offset_left = -0.125
+offset_top = 14.0
+offset_right = -23.5
+offset_bottom = -7.974
+text = "Fullscreen"
+
+[node name="CheckBox" type="CheckBox" parent="VideoConfig"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.863
+anchor_top = 0.124
+anchor_right = 0.947
+anchor_bottom = 0.336
+offset_left = 0.0449371
+offset_top = -0.012001
+offset_right = 0.104919
+offset_bottom = 0.0319977
+
+[node name="ResDrop" type="OptionButton" parent="VideoConfig"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.549
+anchor_right = 0.989
+anchor_bottom = 0.726
+offset_left = 0.00999904
+offset_top = -0.0370026
+offset_right = 0.134918
+offset_bottom = -0.038002
+
+[node name="ResumeBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 240.0
+offset_bottom = 68.0
+text = "Resume"
+
+[node name="TitleBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 78.0
+offset_right = 240.0
+offset_bottom = 145.0
+text = "Title Screen"
+
+[node name="QuitBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 151.0
+offset_right = 242.0
+offset_bottom = 218.0
+text = "Quit"
+
+[connection signal="toggled" from="VideoConfig/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="item_selected" from="VideoConfig/ResDrop" to="." method="_on_res_drop_item_selected"]
+[connection signal="pressed" from="ResumeBtn" to="." method="_on_resume_btn_pressed"]
+[connection signal="pressed" from="TitleBtn" to="." method="_on_title_btn_pressed"]
+[connection signal="pressed" from="QuitBtn" to="." method="_on_quit_btn_pressed"]

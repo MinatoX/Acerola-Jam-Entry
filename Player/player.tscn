@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4xkmprloixn1"]
+
+[ext_resource type="Script" path="res://Acerola-Jam-Entry/Player/playercontroller.gd" id="1_unu4h"]
+[ext_resource type="PackedScene" uid="uid://7vhp012linv1" path="res://Acerola-Jam-Entry/Player/camera.tscn" id="2_688cd"]
+[ext_resource type="AudioStream" uid="uid://c1wxq45lmq00m" path="res://Acerola-Jam-Entry/Sounds/SE/footstepMetal.wav" id="3_jc3s3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ykqct"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8e8ar"]
+
+[node name="Player" type="Node3D"]
+
+[node name="player" type="CharacterBody3D" parent="."]
+script = ExtResource("1_unu4h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player"]
+shape = SubResource("CapsuleShape3D_ykqct")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="player"]
+mesh = SubResource("CapsuleMesh_8e8ar")
+skeleton = NodePath("../..")
+
+[node name="Camera3D" parent="player/MeshInstance3D" instance=ExtResource("2_688cd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="player/MeshInstance3D/Camera3D"]
+target_position = Vector3(0, 0, -2)
+
+[node name="FootstepSnd" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jc3s3")
+bus = &"SE"
+
+[node name="Reticle" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -33.0
+offset_right = 20.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "."
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://caeuqinh0iwvm"]
+
+[ext_resource type="Texture2D" uid="uid://dx2j0slf6q3c7" path="res://Acerola-Jam-Entry/Textures/labwalltexture.png" id="1_052qc"]
+[ext_resource type="Texture2D" uid="uid://cfdwqfqx0hd54" path="res://Acerola-Jam-Entry/Textures/labwallnormal.png" id="2_o0wno"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7xa62"]
+cull_mode = 1
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.015
+
+[resource]
+next_pass = SubResource("StandardMaterial3D_7xa62")
+diffuse_mode = 1
+albedo_texture = ExtResource("1_052qc")
+metallic = 0.75
+roughness = 0.5
+normal_enabled = true
+normal_scale = 0.25
+normal_texture = ExtResource("2_o0wno")
+uv1_scale = Vector3(32, 32, 32)

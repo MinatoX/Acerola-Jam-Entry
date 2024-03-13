@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://7vhp012linv1"]
+
+[ext_resource type="Shader" path="res://Acerola-Jam-Entry/Shaders/pixelization.gdshader" id="1_231k6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3vxti"]
+render_priority = 0
+shader = ExtResource("1_231k6")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_01etw"]
+size = Vector2(10, 10)
+
+[node name="Camera3D" type="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.834857, 0.550466, 0, -0.550466, 0.834857, -0.352694, 4.85039, 16.0961)
+
+[node name="SpatialPost" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.47035e-08, -1, 0, 1, -4.47035e-08, 0, -0.0376365, -0.795155)
+material_override = SubResource("ShaderMaterial_3vxti")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_01etw")

@@ -1,0 +1,25 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bk8a6td8vt14b"]
+
+[ext_resource type="Texture2D" uid="uid://bjp1hkk43it1c" path="res://Acerola-Jam-Entry/Enemy/Parrot_0.png" id="1_kkcbt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yak8w"]
+cull_mode = 1
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.015
+
+[resource]
+next_pass = SubResource("StandardMaterial3D_yak8w")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_kkcbt")
+roughness = 0.5
+rim = 0.0
+clearcoat_roughness = 0.0
+anisotropy_enabled = true
+anisotropy = 1.0
+heightmap_scale = 5.305
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+refraction_scale = 1.0
+grow = true

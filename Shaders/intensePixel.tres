@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cf870r5s1tn62"]
+
+[ext_resource type="Shader" path="res://Acerola-Jam-Entry/Shaders/pixelizationintense.gdshader" id="1_lklwi"]
+[ext_resource type="Material" uid="uid://bu8ef1becp22c" path="res://Acerola-Jam-Entry/Shaders/chromshd.tres" id="1_rnedd"]
+
+[resource]
+render_priority = 0
+next_pass = ExtResource("1_rnedd")
+shader = ExtResource("1_lklwi")

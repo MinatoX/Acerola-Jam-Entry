@@ -1,0 +1,101 @@
+[gd_scene load_steps=2 format=3 uid="uid://c487fmp4qwi1o"]
+
+[ext_resource type="Script" path="res://Acerola-Jam-Entry/Placeholder/AudioConfig.gd" id="1_uy0l0"]
+
+[node name="AudioConfig" type="Panel"]
+anchors_preset = -1
+anchor_left = 0.759
+anchor_top = 0.76
+anchor_right = 0.759
+anchor_bottom = 0.76
+offset_left = -0.520081
+offset_top = -0.200012
+offset_right = 284.48
+offset_bottom = 112.8
+script = ExtResource("1_uy0l0")
+
+[node name="ambSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.316
+anchor_top = 0.348
+anchor_right = 0.979
+anchor_bottom = 0.676
+offset_left = -0.0600052
+offset_top = 9.676
+offset_right = -0.0150146
+offset_bottom = -7.66502
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="masterSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.316
+anchor_right = 0.979
+anchor_bottom = 0.384
+offset_left = -0.0600052
+offset_top = 16.0
+offset_right = -0.0150146
+offset_bottom = -7.66901
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="sfxSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.316
+anchor_top = 0.646
+anchor_right = 0.979
+anchor_bottom = 1.0
+offset_left = -0.0600052
+offset_top = 9.00198
+offset_right = -0.0150146
+offset_bottom = -14.444
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.295
+anchor_right = 0.291
+anchor_bottom = 0.723
+offset_left = 0.0149994
+offset_top = 12.665
+offset_right = 0.0649948
+offset_bottom = -12.699
+text = "Ambience"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = 0.613
+anchor_right = 0.298
+anchor_bottom = 1.0
+offset_left = 0.02
+offset_top = 7.731
+offset_right = -36.93
+offset_bottom = -13.0
+text = "SFX"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_right = 0.3
+anchor_bottom = 0.398
+offset_left = -0.125
+offset_top = 14.0
+offset_right = -23.5
+offset_bottom = -7.974
+text = "Master"
+
+[connection signal="value_changed" from="ambSlider" to="." method="_on_amb_slider_value_changed"]
+[connection signal="value_changed" from="masterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="sfxSlider" to="." method="_on_sfx_slider_value_changed"]

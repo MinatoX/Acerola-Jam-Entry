@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bu8ef1becp22c"]
+
+[ext_resource type="Shader" path="res://Acerola-Jam-Entry/Shaders/chrom.gdshader" id="1_h4272"]
+
+[resource]
+shader = ExtResource("1_h4272")
+shader_parameter/rOff = Vector2(-6, -6)
+shader_parameter/gOff = Vector2(-6, 6)
+shader_parameter/bOff = Vector2(-6, 6)

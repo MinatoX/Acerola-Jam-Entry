@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://3g2iufxhgl00"]
+
+[ext_resource type="Texture2D" uid="uid://cola8837a8f46" path="res://Acerola-Jam-Entry/Textures/waitfloortexture.png" id="1_40k8r"]
+[ext_resource type="Material" uid="uid://245sgpjgkj6" path="res://Acerola-Jam-Entry/Props/trueoutline.tres" id="2_uvbe4"]
+[ext_resource type="Texture2D" uid="uid://c2dma3wky0xqk" path="res://Acerola-Jam-Entry/Textures/waitfloornormal.png" id="3_qet5i"]
+
+[resource]
+next_pass = ExtResource("2_uvbe4")
+albedo_texture = ExtResource("1_40k8r")
+metallic = 0.3
+roughness = 0.75
+normal_enabled = true
+normal_texture = ExtResource("3_qet5i")
+uv1_scale = Vector3(64, 64, 64)

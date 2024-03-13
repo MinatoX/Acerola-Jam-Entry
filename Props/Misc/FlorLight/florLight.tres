@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ckth4ltub3ajb"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+roughness = 0.0
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 3.57
+anisotropy = 0.67
+ao_light_affect = 1.0
+backlight = Color(1, 1, 1, 1)
+refraction_scale = 1.0
+disable_receive_shadows = true

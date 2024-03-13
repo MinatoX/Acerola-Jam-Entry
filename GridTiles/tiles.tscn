@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://jpj7gyvbdyi4"]
+
+[ext_resource type="Material" uid="uid://ejdoq8i845gm" path="res://Acerola-Jam-Entry/Shaders/outlineMat.tres" id="1_42nnm"]
+[ext_resource type="Texture2D" uid="uid://bpdi8drkhdk7f" path="res://Acerola-Jam-Entry/GridTiles/LabBlock_0.png" id="1_egfal"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rv4fm"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_egfal")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c5l8q"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 1.00001, 1.00001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0, 4, 0, 5, 0, 6, 0, 6, 0, 5, 0, 7, 0, 4, 0, 1, 0, 5, 0, 5, 0, 1, 0, 0, 0, 7, 0, 2, 0, 6, 0, 6, 0, 2, 0, 3, 0, 5, 0, 0, 0, 7, 0, 7, 0, 0, 0, 2, 0, 1, 0, 4, 0, 3, 0, 3, 0, 4, 0, 6, 0),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(254, 255, 254, 255, 254, 255, 0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 254, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 254, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uwxa4"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 1.00001, 1.00001),
+"attribute_data": PackedByteArray(0, 0, 255, 63, 255, 63, 255, 63, 0, 0, 255, 127, 255, 63, 255, 127, 255, 63, 255, 63, 255, 127, 255, 63, 255, 63, 255, 127, 255, 127, 255, 127, 255, 63, 255, 191, 0, 0, 255, 191, 255, 63, 255, 127, 0, 0, 255, 127, 255, 191, 0, 0, 255, 127, 0, 0, 255, 191, 255, 63, 255, 127, 255, 63, 255, 63, 0, 0, 255, 127, 0, 0, 255, 63, 255, 63, 255, 127, 255, 63, 0, 0, 0, 0, 255, 63, 0, 0, 0, 0, 255, 63, 255, 63, 255, 63),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0, 4, 0, 5, 0, 6, 0, 6, 0, 5, 0, 7, 0, 8, 0, 9, 0, 10, 0, 10, 0, 9, 0, 11, 0, 12, 0, 13, 0, 14, 0, 14, 0, 13, 0, 15, 0, 16, 0, 17, 0, 18, 0, 18, 0, 17, 0, 19, 0, 20, 0, 21, 0, 22, 0, 22, 0, 21, 0, 23, 0),
+"material": SubResource("StandardMaterial3D_rv4fm"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(254, 255, 254, 255, 254, 255, 255, 191, 254, 255, 254, 255, 0, 0, 255, 191, 254, 255, 0, 0, 254, 255, 255, 191, 254, 255, 0, 0, 0, 0, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 254, 255, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 254, 255, 0, 0, 255, 255, 254, 255, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 254, 255, 255, 255, 254, 255, 254, 255, 254, 255, 255, 255, 0, 0, 0, 0, 254, 255, 0, 0, 254, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 254, 255, 255, 127, 254, 255, 254, 255, 254, 255, 255, 127, 0, 0, 0, 0, 254, 255, 255, 127, 254, 255, 0, 0, 254, 255, 255, 127, 254, 255, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c5l8q")
+
+[node name="Tiles" type="Node3D"]
+
+[node name="floor" type="Node3D" parent="."]
+
+[node name="floor" type="MeshInstance3D" parent="floor"]
+material_override = ExtResource("1_42nnm")
+mesh = SubResource("ArrayMesh_uwxa4")
+skeleton = NodePath("")
